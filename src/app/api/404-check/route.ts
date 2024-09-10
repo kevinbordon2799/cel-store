@@ -3,9 +3,13 @@ import { NextResponse, NextRequest } from "next/server";
 
 export async function GET(request: NextRequest) {
     // console.log(request.ip);
-    console.log({ name: "Kevin", age: 25 });
+    const person = {
+        name: "Kevin",
+        age: 25
+    }
+    console.log({ person });
 
-    return new NextResponse(JSON.stringify({ msg: "msg" }), { status: 200 });
+    return new NextResponse(JSON.stringify(person), { status: 200 });
 }
 
 export async function POST(request: NextRequest) {
